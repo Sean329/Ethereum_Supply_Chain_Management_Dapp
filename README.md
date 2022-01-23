@@ -39,4 +39,4 @@ The build of the Dapp has 5 steps:
 - Part 4 - Deploy smart contracts on Rinkeby: Deploy the smart contracts with Truffle.
 - Part 5 - Build the frontend.
 
-The Rinkeby contract address for this project is: TBD
+The contract address on Rinkeby: TBD
