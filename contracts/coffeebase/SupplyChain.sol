@@ -1,6 +1,13 @@
 pragma solidity ^0.4.24;
+
+import "../coffeeaccesscontrol/ConsumerRole.sol";
+import "../coffeeaccesscontrol/DistributorRole.sol";
+import "../coffeeaccesscontrol/FarmerRole.sol";
+import "../coffeeaccesscontrol/RetailerRole.sol";
+
+
 // Define a contract 'Supplychain'
-contract SupplyChain {
+contract SupplyChain is ConsumerRole, RetailerRole, DistributorRole, FarmerRole {
 
   // Define 'owner'
   address owner;
@@ -158,12 +165,13 @@ contract SupplyChain {
     // Add the new item as part of Harvest
     items[_upc].sku = sku;
     items[_upc].upc = _upc;
+    items[_upc].ownerID = _originFarmerID;
     items[_upc].originFarmerID = _originFarmerID;
     items[_upc].originFarmName = _originFarmName;
     items[_upc].originFarmInformation = _originFarmInformation;
     items[_upc].originFarmLatitude = _originFarmLatitude;
     items[_upc].originFarmLongitude = _originFarmLongitude;
-    items[_upc].productID = _productID;
+    items[_upc].productID = _upc + sku;
     items[_upc].productNotes = _productNotes;
 
     // Increment sku
