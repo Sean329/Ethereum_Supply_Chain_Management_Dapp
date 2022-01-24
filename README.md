@@ -39,4 +39,5 @@ The build of the Dapp has 5 steps:
 - Part 4 - Deploy smart contracts on Rinkeby: Deploy the smart contracts with Truffle.
 - Part 5 - Build the frontend.
 
+## Deploy the contract on public blockchain
 The SupplyChain contract address on Rinkeby is ```0xa218532e656d9dc0df4f442450c7ae29c3b78de7``` at transaction hash ``` 0xcd89ce2e295a5f4a5346987ab82dc9d36860ac6c498e983b38a94050a744f71b```
